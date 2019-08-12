@@ -1,0 +1,89 @@
+What is JUNIT:
+JUnit is one of the most popular unit testing frameworks in the Java Ecosystem.
+The goal is to create an up-to-date foundation for developer-side testing on the JVM.
+JUnit is an open source unit testing framework.
+Written by Erich Gamma and Kent Beck
+Part of xUnit family
+Eclipse includes JUnit, You can also run JUnit outside of Eclipse using JUnit's window
+Home Page : https://junit.org/junit5/
+
+Advantages
+
+Focuses on fundamental block at a time
+Help to find problems early
+Easy to maintain
+Simplifies Integration testing
+Proves as documentation of system(Proves that system works)
+Leads to high quality code, higher productivity and low maintenance
+JUnit helps developer write unit tests as they develop the system
+Make writing test cases easy and painless
+
+Application of JUnit
+
+Principles of testing frameworks:
+
+Each unit test should run independently of all other unit tests
+Errors must be detected and reported test by test
+It must be easy to define which unit tests will run
+It should be easy to add unit tests
+Help us reduce the cost of writing test by reusing code
+
+Disadvantages
+
+Cannot do dependency testing. by using Mockito we can achieve this.
+Not suitable for higher level of testing. (Large test suites)
+
+Important Annotations
+
+@Test - To mark a method as a test method
+@Test(expected=ExceptionClassName.class) - To mark a method for the exception scenario
+@Before - Will excute before each test method
+@After - Will execute after each test method
+@BeforeClass - Will run before entire test class
+@AfterClass - Will run after entire test class
+@Ignore - If we use this annontation on the method that method will be ignored
+@RunWith(SpringJUnit4ClassRunner.class)
+It extends BlockJUnit4ClassRunner.class
+Implements JunitRunner framework for writing Integration Test
+
+static org.junit.Assert.* - To use the static assert methods
+Return type of every Assert method is void
+
+1. void assertNull(Object obj) - Checks that the object is null
+2. void assertNotNull(Object obj) - Checks that the object is not null
+3. void assertEquals(boolean expected, boolean actual) - Checks that two primitives/objects are equal
+4. void assertTrue(boolean condition) - Checks that the condition is true
+5. void assertFalse(boolean condition) - Checks that the condition is false
+6. void assertSame(obj1, obj2) - Checks that two object references are pointing to the same Object
+7. void assertNotSame(obj1, obj2) - checks that two object references are not pointing to the same Object
+8. void assertArrayEquals(expectedArray, actualArray) - Checks that the two arrays are equal
+
+Parameterized Test
+
+To use parameterized test we have to annotate the class name with @RunWith(Parameterized.class)
+
+We can use parameterized test for testing a single method with different scenarios or inputs
+
+Test Coverage / Code Coverage:
+
+TC or CC is the number of lines of our source code that is tested whenever unit tests are run against the source code.
+We measure CC using tools.
+Popular Tools:
+1. EclEmma
+2. Cobertura
+3. JTest
+
+Mockito
+
+Mocking
+
+Testing in Isolation, Testing our code without testing our dependency(Dependencies are tested automatically)
+
+A------------------->B		
+										Mock
+Example Scenario
+
+If class A depends on or uses Class B and if we are unit testing class A then we will mockout Class B and all of its methods that class A uses
+
+
+
